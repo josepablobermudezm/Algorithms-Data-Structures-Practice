@@ -31,7 +31,6 @@ class Solution:
         minString = min(strs,key=len)
         for idy, y in enumerate(minString):
             for other in strs:
-                print(other[idy], '=', y)
                 if other[idy] != y:
                     return minString[:idy]
         return minString 
