@@ -20,16 +20,18 @@ class Solution:
             minString = final 
         return final
 '''
+
 class Solution:
-    def longestCommonPrefix(self, strs):
+    def longestCommonPrefix(self, strs: List[str]) -> str:
         if not strs:
             return ""
-        shortest = min(strs,key=len)
-        for i, ch in enumerate(shortest):
+        minString = min(strs,key=len)
+        for idy, y in enumerate(minString):
             for other in strs:
-                if other[i] != ch:
-                    return shortest[:i]
-        return shortest 
+                print(other[idy], '=', y)
+                if other[idy] != y:
+                    return minString[:idy]
+        return minString 
             
                 
         
