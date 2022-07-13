@@ -21,6 +21,8 @@ class Solution:
         return final
 '''
 
+'''
+#Second Approach without extra variables and using the lenght of the min string as main loop
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
         if not strs:
@@ -32,6 +34,21 @@ class Solution:
                 if other[idy] != y:
                     return minString[:idy]
         return minString 
+'''
+
+# Third Approach using alphabetic order of min and max lengh
+
+class Solution:
+    def longestCommonPrefix(self, m):
+        if not m: return ''
+		#since list of string will be sorted and retrieved min max by alphebetic order
+        s1 = min(m)
+        s2 = max(m)
+
+        for i, c in enumerate(s1):
+            if c != s2[i]:
+                return s1[:i] #stop until hit the split index
+        return s1
             
                 
         
