@@ -1,5 +1,4 @@
 # first approach with string
-'''
 class Solution:
     def isPalindrome(self, x: int) -> bool:
         if x < 0:
@@ -7,10 +6,10 @@ class Solution:
         if str(x) == str(x)[::-1]:
             return True
         return False
-'''
+
 
 # using integer
-
+'''
 class Solution:
     def isPalindrome(self, x: int) -> bool:
         if x<0:
@@ -22,3 +21,4 @@ class Solution:
             newNum = newNum * 10 + x%10
             x = x//10
         return newNum == inputNum
+'''
