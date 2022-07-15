@@ -16,14 +16,3 @@ class Solution:
             first.next, second = second, first.next
             first = first.next
         return head
-                
-        
-            
-            
-# first   1 - 1 - 2 - 3 - 4
-# second  4
-# current 
-
-# 
-            
-                
