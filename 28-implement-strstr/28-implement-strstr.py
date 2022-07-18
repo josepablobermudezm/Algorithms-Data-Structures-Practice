@@ -1,4 +1,5 @@
-class Solution:
+'''class Solution:
+#first approach
     def strStr(self, haystack: str, needle: str) -> int:
         if (not needle or not haystack):
             return 0
@@ -21,4 +22,12 @@ class Solution:
                     i = 0
             else:
                 return -1
+        return -1
+'''
+
+class Solution:
+    def strStr(self, haystack: str, needle: str) -> int:
+        for i in range(len(haystack) - len(needle)+1):
+            if haystack[i:i+len(needle)] == needle:
+                return i
         return -1
