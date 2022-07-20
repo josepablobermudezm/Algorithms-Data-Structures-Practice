@@ -4,6 +4,9 @@
 #         self.val = val
 #         self.next = next
 
+'''
+#First approach
+
 class Solution:
     def deleteDuplicates(self, head: Optional[ListNode]) -> Optional[ListNode]:
         headAux = head
@@ -15,4 +18,13 @@ class Solution:
                     if headAux.val != headAux.next.val:
                         headAux = headAux.next
         return head
-        
+'''
+  
+class Solution:
+    def deleteDuplicates(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        cur = head
+        while cur:
+            while cur.next and cur.next.val == cur.val:
+                cur.next = cur.next.next     # skip duplicated node
+            cur = cur.next     # not duplicate of current node, move to next node
+        return head
