@@ -9,8 +9,7 @@ class Solution:
     def inorderTraversal(self, root):
         # Set current to root of binary tree
         current = root 
-        stack = []
-        array = []
+        stack, array = [], []
 
         while True:
             if current is not None:
